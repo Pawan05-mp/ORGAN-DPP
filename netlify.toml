@@ -1,0 +1,22 @@
+# Netlify Configuration for ORGAN-DPP
+
+[build]
+  base = "frontend"
+  command = "npm run build"
+  publish = ".next"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "24"
+  NEXT_SKIP_ENV_VALIDATION = true
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  
+# Support for SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
