@@ -30,7 +30,11 @@ export default function Home() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/generate", {
+      const apiUrl = process.env.NODE_ENV === "production"
+        ? "/.netlify/functions/generate"
+        : "http://127.0.0.1:8000/api/generate";
+      
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
