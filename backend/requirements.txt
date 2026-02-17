@@ -1,0 +1,18 @@
+# Core
+fastapi>=0.95.0
+uvicorn[standard]>=0.20.0
+numpy
+scikit-learn
+sqlalchemy[aio]>=1.4
+asyncpg
+psycopg2-binary
+python-dotenv
+aiofiles
+
+# ML
+torch
+tqdm
+
+# Chemistry
+# RDKit is best installed via conda; attempt pip fallback
+rdkit-pypi
