@@ -17,3 +17,26 @@ __pycache__/
 *.swp
 *.swo
 *~
+
+# Python binaries and DLLs
+*.pyd
+*.dll
+*.exe
+python.exe
+python3.dll
+python311.dll
+pythonw.exe
+python.cat
+python311._pth
+python311.zip
+get-pip.py
+
+# Dev tools and scripts
+git_push.py
+push_to_github.py
+docker-compose.yml
+
+# Frontend build artifacts
+frontend/dev.log
+frontend/next-env.d.ts
+
